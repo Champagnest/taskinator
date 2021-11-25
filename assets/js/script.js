@@ -1,7 +1,34 @@
 var formEl = document.querySelector("#task-form");
 var tasksToDoEl = document.querySelector("#tasks-to-do");
 
+// check if input values are empty strings
+if (!taskNameInput || !taskTypeInput) {
+    alert("You need to fill out the task form!");
+    return false;
+  }
 var taskFormHandler = function(event) {
+    if (true) {
+        // this will run because true is true
+          console.log("Is true true? Yes.");
+        }
+        
+        if (false) {
+        // this will not run because false is not true
+          console.log("Is false true? No.");
+        }
+        
+        if (3 === 10 || "a" === "a") {
+        // this will run because at least one of the conditions is true
+          console.log("Does 3 equal 10? No.");
+          console.log("Does the letter 'a' equal the letter 'a'? Yes.");
+        }
+        
+        if (3 === 10 && "a" === "a") {
+        // this will not run because both conditions have to be true to run
+          console.log("Does 3 equal 10? No.");
+          console.log("Does the letter 'a' equal the letter 'a'? Yes.");
+        }
+        formEl.reset();
   event.preventDefault();
   var taskNameInput = document.querySelector("input[name='task-name']").value;
   var taskTypeInput = document.querySelector("select[name='task-type']").value;
